@@ -1,0 +1,12 @@
+{% extends 'acceuil.html' %} {% load static tailwind_tags %}
+
+{% block styles %}
+  {% tailwind_preload_css %}
+  {% tailwind_css %}
+{% endblock styles %}
+
+{% block topic %}
+<div class="article flex min-h-screen h-full w-full items-center justify-center">
+hello world!
+</div>
+{% endblock topic %}

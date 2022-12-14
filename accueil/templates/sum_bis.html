@@ -1,0 +1,38 @@
+{% extends 'acceuil.html' %} {% load static tailwind_tags %}
+
+{% block styles %}
+  {% tailwind_preload_css %}
+  {% tailwind_css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'sum.css' %}">
+{% endblock styles %}
+
+{% block topic %}
+<div class="article flex flex-col min-h-screen h-full w-full items-center justify-center">
+  <div id="result" class="flex items-center justify-center w-fit h-fit"></div>
+  <form class="flex flex-col items-center justify-center w-fit h-fit" action="#">
+    {% csrf_token %}
+    <p>
+      <label for="first">first</label>
+      <input id="first" name="first" type="text">
+    </p>
+    <p>
+      <label for="second">second</label>
+      <input id="second" name="second" type="text">
+    </p>
+    <button onclick="sum(e)">
+      <input id="add" name="add" type="button" value="add">
+    </button>
+  </form>
+</div>
+
+<script>
+  sum = (e) => {
+    e.preventDefault();
+    first = document.getElementById('first')
+    second = document.getElementById('second')
+
+    document.getElementById('result').innerHTML = `result : ${first.value + second.value}`
+  }
+</script>
+
+{% endblock topic %}

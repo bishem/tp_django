@@ -1,9 +1,9 @@
 # Initialisation du projet
 
 ## Initialisation de l'environnement
-Création de votre environnement virtuel : `virtualenv env_name -p python3`
+Création de votre environnement virtuel : `virtualenv env -p python3`
 
-Activation de votre environnement virtuel : `source env_name/bin/activate`
+Activation de votre environnement virtuel : `source env/bin/activate`
 
 Toutes les commandes utiles devront maintenant être exécutées avec l'environment virtuel actif.
 
@@ -12,9 +12,7 @@ Pour sortir de l'environnement virtuel `deactivate`
 Installation de Django dans l'environnement virtuel : `pip install django`
 
 ## Création du projet
-Création du projet : `django-admin startproject project_name`
-
-Entrer dans le projet : `cd project_name`
+Création du projet : `django-admin startproject annuaire .`
 
 Lancer votre projet : `./manage.py runserver`
 
@@ -29,20 +27,20 @@ La commande `./manage.py migrate` va mettre  à jour votre base de données et r
 ## Création de l'application
 
 Nous allons commencer par créer un application `accueil` pour nous familiariser avec le Framework.
-Création d'une application : `./manage.py startapp app_name`
+Création d'une application : `./manage.py startapp acceuil`
 
 Vous pouvez désormais ouvrir votre projet dans votre éditeur favori !
 
 Renseignez votre application dans le fichier settings.py du projet
-Ajoutez les routes vers votre application dans myApp/urls.py
+Ajoutez les routes vers votre application dans annuaire/urls.py
 
 ## Premère page
 Nous allons maintenant créer notre première page !
 
-Allez dans le fichier myApp/accueil/views.py et ajoutez la fonction "helloWorld" qui renverra une simple HttpResponse avec un titre Hello World !
+Allez dans le fichier accueil/views.py et ajoutez la fonction "helloWorld" qui renverra une simple HttpResponse avec un titre Hello World !
 
 Créez un fichier urls.py dans votre application "accueil"
-Definissez votre route dans myApp/accueil/urls.py, la page dot être disponible à l'adresse http://localhost:3000
+Definissez votre route dans accueil/urls.py, la page dot être disponible à l'adresse http://localhost:8000
 
 Vous venez de réussir à créer votre première page !
 

@@ -1,3 +1,11 @@
-<nav>
-nav
+<nav class="flex fixed h-10 bg-amber-300 items-center justify-end w-screen">
+  <button id="now" class="ml-2 mr-auto h-full px-2"></button>
+  <button class="mx-2 h-full px-2"><a href="{% url 'hello' %}">Bonjour</a></button>
+  <button class="mx-2 h-full px-2"><a href="{% url 'sum' %}">Somme</a></button>
+  <button class="mx-2 h-full px-2"><a href="{% url 'sum_bis' %}">Somme bis</a></button>
 </nav>
+
+<script>
+  now = new Date()
+  document.getElementById("now").innerHTML = now.toDateString();
+</script>
