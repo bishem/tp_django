@@ -1,5 +1,21 @@
 # Initialisation du projet
 
+- open a terminal at the root of the repository
+- install dependencies with
+```bash
+pip install -r requirements.txt
+```
+
+- to run the project
+- in one terminal
+```bash
+python manage.py tailwind start
+```
+- in another terminal
+```bash
+python manage.py runserver
+```
+
 ## Initialisation de l'environnement
 Création de votre environnement virtuel : `virtualenv env -p python3`
 
