@@ -44,13 +44,17 @@ INSTALLED_APPS = [
     'accueil',
     'tailwind',  # required by tailwind
     'theme',  # required by tailwind
+    'django_browser_reload'  # required by tailwind
 ]
+
+TAILWIND_APP_NAME = 'theme'  # required by tailwind
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
+    "django_browser_reload.middleware.BrowserReloadMiddleware",  # required by tailwind
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",

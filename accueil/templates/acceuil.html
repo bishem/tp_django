@@ -1,6 +1,9 @@
 {% extends 'base.html' %} {% load static tailwind_tags %}
 
-{% block styles %}  {% endblock styles %}
+{% block styles %}
+  {% tailwind_preload_css %}
+  {% tailwind_css %}
+{% endblock styles %}
 
 {% block content %}
 acceuil
